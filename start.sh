@@ -47,8 +47,8 @@ qemu-system-x86_64 \
   -device vfio-pci,host=0000:01:00.1,id=hostdev1 \
   -device vfio-pci,host=0000:01:00.0,id=hostdev2 \
   \
-  -object input-linux,id=kbd1,evdev=/dev/input/by-id/usb-Logitech_USB_Keyboard-event-kbd,grab_all=on,repeat=on \
-  -object input-linux,id=mouse1,evdev=/dev/input/by-id/usb-Logitech_USB_Receiver-if01-event-mouse \
+  # -object input-linux,id=kbd1,evdev=/dev/input/by-id/usb-Logitech_USB_Keyboard-event-kbd,grab_all=on,repeat=on \
+  # -object input-linux,id=mouse1,evdev=/dev/input/by-id/usb-Logitech_USB_Receiver-if01-event-mouse \
   \
   -vga none \
   # -nographic &

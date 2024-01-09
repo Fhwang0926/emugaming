@@ -1,10 +1,10 @@
 sudo DOCKER_BUILDKIT=1 docker build -t emugaming .
 
 sudo docker run \
-  --volume /media/wysohn/workspace/others/win10.iso:/win10.iso \
-  --volume /media/wysohn/workspace/others/virtio.iso:/virtio.iso \
-  --volume /home/wysohn/win10.raw:/win10.raw `# the persistent volume` \
-  --volume /media/wysohn/workspace/vmshare:/vmshare \
+  --volume /root/emu/iso/win10.iso:/win10.iso \
+  --volume /root/emu/iso/virtio.iso:/virtio.iso \
+  --volume /root/emu/win10.raw:/win10.raw `# the persistent volume` \
+  --volume /root/emu/vmshare:/vmshare \
   --interactive --tty \
   \
   --device /dev/kvm `# use hardware acceleration` \
