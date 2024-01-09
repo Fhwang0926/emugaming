@@ -17,7 +17,7 @@ modprobe vfio_iommu_type1
 # gracefully shut down QEMU when docker tries stopping it
 trap 'echo system_powerdown | socat - UNIX-CONNECT:/var/run/qemu_monitor' SIGTERM
 
-run qemu
+# run qemu
 qemu-system-x86_64 \
   -nodefaults \
   -monitor stdio \
@@ -50,7 +50,7 @@ qemu-system-x86_64 \
   # -object input-linux,id=kbd1,evdev=/dev/input/by-id/usb-Logitech_USB_Keyboard-event-kbd,grab_all=on,repeat=on \
   # -object input-linux,id=mouse1,evdev=/dev/input/by-id/usb-Logitech_USB_Receiver-if01-event-mouse \
   \
-  -vga none \
+  # -vga none \
   # -nographic &
 QEMU_PID=$!
 
